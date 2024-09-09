@@ -1,0 +1,168 @@
+/* Adicione ao seu style.css */
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-image: url('./img/tipos-de-mar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.calendar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 89vh; 
+    width: 100vw;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.clock-container {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.calendar-container {
+    width: 75vw; 
+    height: 75vh; 
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calendar {
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+thead th {
+    background-color: #f4f4f4;
+}
+
+tbody td {
+    height: calc(75vh / 6); 
+    vertical-align: top;
+}
+
+.current-date {
+    background: linear-gradient(#308fc0, #93ccf2);
+    color: #000; 
+    font-weight: bold;
+}
+
+.content .list-menu {
+    display: none;
+}
+
+.one,
+.two,
+.three {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    margin: 6px auto;
+    transition-duration: 0.5s;
+}
+
+.menu-toggle {
+    width: 40px;
+    height: 30px;
+}
+
+.content.on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20vw;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#308fc0, #93ccf2);
+}
+
+.content.on .menu-toggle {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+
+.content.on .list-menu {
+    display: block;
+    gap: 30px;
+}
+
+.content.on .list-menu li {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.content.on .list-menu li a {
+    font-size: 1.2rem;
+}
+
+.content.on .menu-toggle .two {
+    opacity: 0;
+}
+
+.content.on .menu-toggle .one {
+    transform: rotate(45deg) translate(5px, 7px);
+}
+
+.content.on .menu-toggle .three {
+    transform: rotate(-45deg) translate(5px, -7px);
+}
+
+.has-task {
+    background: linear-gradient(#bfd7ef,  #0e263c);
+    position: relative;
+}
+
+.has-task::after {
+    content: "Tarefa";
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+
+.current-date {
+    border: 2px solid blue;
+}
